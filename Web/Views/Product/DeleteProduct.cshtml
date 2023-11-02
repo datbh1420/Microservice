@@ -1,0 +1,75 @@
+﻿@model ProductDTO
+@{
+    ViewData["Title"] = "DeleteProduct";
+}
+
+
+
+<form asp-action="DeleteProduct">
+    <br />
+    <div class="container border pb-3">
+        <h1 class="text-white text-center">Delete Product</h1>
+        <input asp-for="Id" hidden />
+        <input asp-for="CategoryName" hidden />
+        <input asp-for="Price" hidden />
+        <input asp-for="Quantity" hidden />
+        <input asp-for="Image" hidden />
+        <input asp-for="ImagePath" hidden />
+        <input asp-for="ImageLocalPath" hidden />
+
+        <hr />
+        <div class="row">
+            <div class="col-2">
+                <label class="control-label pt-2 text-white" style="font-size: 20px;">Name</label>
+            </div>
+            <div class="col-10 pb-3">
+                <label class="control-label pt-2" style="font-size: 20px;">@Model.Name</label>
+            </div>
+            <div class="col-2">
+                <label class="control-label pt-2 text-white" style="font-size: 20px;">CategoryName</label>
+            </div>
+            <div class="col-10 pb-3">
+                <label class="control-label pt-2" style="font-size: 20px;">@Model.CategoryName</label>
+            </div>
+            <div class="col-2">
+                <label class="control-label pt-2 text-white" style="font-size: 20px;">Price</label>
+            </div>
+            <div class="col-10 pb-3">
+                <label class="control-label pt-2" style="font-size: 20px;">@Model.Price</label>
+            </div>
+            <div class="col-2">
+                <label class="control-label pt-2 text-white" style="font-size: 20px;">Quantity</label>
+            </div>
+            <div class="col-10 pb-3">
+                <label class="control-label pt-2" style="font-size: 20px;">@Model.Quantity</label>
+            </div>
+            <div class="col-2">
+                <label class="control-label pt-2 text-white" style="font-size: 20px;">Description</label>
+            </div>
+            <div class="col-10 pb-3">
+                <textarea asp-for="Description" readonly class="form-control"></textarea>
+            </div>
+
+            <div class="col-2">
+                <label class="control-label pt-2 text-white" style="font-size: 20px;">ImagePath</label>
+            </div>
+            <div class="col-10 pb-3">
+                <label class="control-label pt-2" style="font-size: 20px;">@Model.ImagePath</label>
+            </div>
+            <div class="col-5 offset-2">
+                <a class="btn-primary btn form-control" asp-action="ProductIndex">Back to List</a>
+            </div>
+            <div class="col-5 ">
+                <input type="submit" value="Delete" class="btn btn-primary form-control" />
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,46 @@
+﻿@model LoginRequestDTO
+
+
+<form method="post">
+    <div class="container border p-4">
+        <div class="row text-center">
+            <h1>Login</h1>
+        </div>
+
+        <div class="row login-default">
+            <div class="col-md-4 offset-md-4 pb-2">
+                <input asp-for="Email" class="form-control" placeholder="Email..." />
+                <span asp-validation-for="Email" class="text-danger" />
+            </div>
+            <div class="col-md-4 offset-md-4 pb-2">
+                <input asp-for="Password" class="form-control " placeholder="Password..." type="password"/>
+                <span asp-validation-for="Password" class="text-danger" />
+
+            </div>
+            <div class="col-md-4 offset-md-4 pb-2">
+                <button type="submit" class="form-control btn btn-success" value="Submit">Login</button>
+            </div>
+        </div>
+
+        <div class="row text-center mb-2">
+            <span>-----------------------  OR  -----------------------<span>
+        </div>
+
+        <div class="row login-other">
+            <div class="col-md-4 offset-md-4 pb-2 d-flex justify-content-between">
+                    <a class="btn social-login-button" href="@ViewBag.GoogleUrl">
+                        <img src="~/images/google-logo.png" width="20px" />
+                        <span>Google</span>
+                    </a>
+                    <a class="btn social-login-button" href="@ViewBag.FaceBookUrl">
+                        <img src="~/images/facebook-logo.png" width="20px" />
+                        <span>FaceBook</span>
+                    </a>
+            </div>
+        </div>
+    </div>
+</form>
+@section Scripts{
+    <partial name="_ValidationScriptsPartial" />
+}
+<link href="~/css/login-other-button.css" rel="stylesheet" />

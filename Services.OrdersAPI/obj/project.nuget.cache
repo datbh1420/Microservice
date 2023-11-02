@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "7wRG7rfXV73HvRZB4z1olDtNs6E2AUi6TiokBwGI2LRMbuYLsBUqtVQop9fxaM26AYhPL4gO3v4dJUo0SMvC0g==",
+  "success": true,
+  "projectFilePath": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Services.OrdersAPI\\Services.OrdersAPI.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\swashbuckle.aspnetcore\\6.4.0\\swashbuckle.aspnetcore.6.4.0.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.4.0\\swashbuckle.aspnetcore.swagger.6.4.0.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.4.0\\swashbuckle.aspnetcore.swaggergen.6.4.0.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.4.0\\swashbuckle.aspnetcore.swaggerui.6.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,28 @@
+﻿.col-md-4.offset-md-4.pb-2.d-flex.justify-content-between {
+    display: flex; /* Sử dụng flex container */
+    justify-content: space-between; /* Đặt khoảng cách giữa các phần tử con theo chiều ngang */
+    align-items: center; /* Căn giữa các phần tử con theo chiều dọc */
+}
+
+    /* Tùy chỉnh kiểu cho mỗi thẻ <a> */
+.social-login-button {
+    flex: 1; /* Chiếm một phần bằng nhau của không gian theo chiều ngang */
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: white;
+    color: black;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+        /* Hover state */
+    .social-login-button:hover {
+        background-color: #808080;
+        color: #fff;
+    }
+
+        /* Active state */
+    .social-login-button:active {
+        background-color: #808080;
+        color: #fff;
+    }

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "TuO6vJRW5RK3RREo72PmlMre6kR4TvH8Y6aIhxKRLxM=",
+  "Source": "Services.CartAPI",
+  "BasePath": "_content/Services.CartAPI",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

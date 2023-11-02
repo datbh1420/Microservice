@@ -1,0 +1,45 @@
+﻿@using System.Globalization;
+@model IEnumerable<ProductDTO>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<form>
+    <div class="container row" > 
+        @foreach (var item in Model)
+        {
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="p-0 my-3 border rounded">
+
+                    <div class="card" style="height:560px">
+                        @* Image *@
+                        <a asp-action="ProductDetails" asp-route-Id="@item.Id"><img src="@item.ImagePath" class="card-img-top" /></a>
+                        @* Tittle *@
+                        <div style="margin-bottom:5px; height: 60px;">
+                            <a asp-action="ProductDetails" asp-route-Id="@item.Id" style=" text-decoration:none">
+                                <h4 class="card-title text-white-50 text-center py-2" style=" text-align min-height: 60px;" >@item.Name</h4>
+                            </a>
+                        </div>
+                        @* Body *@
+                        <div class="card-body" style="margin-top:auto ">
+                            <div class="d-flex justify-content-between py-2">
+                                <span class="text-danger" style="font-size:20px;">@string.Format(new CultureInfo("vi-VN"), "{0:c}", item.Price)</span>
+                                <span class="badge bg-warning text-white p-2">@item.CategoryName</span>
+                            </div>
+                            <p class="card-text">@Html.Raw(item.Description)</p>
+                            <div class="row">
+                                <div class="col">
+                                    <a asp-action="ProductDetails" asp-route-Id="@item.Id"
+                                       class="btn btn-success form-control">Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        }
+    </div>
+</form>
+<script src="~/js/homeIndex.js"></script>

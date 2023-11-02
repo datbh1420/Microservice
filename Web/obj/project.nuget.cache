@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "dgSpecHash": "TEJBt2GaHWsoyyGFT7g5qAoq42TQuHToOWDlpAs8Z9odg68PFYlWQ1ur5OMbsHWGbFVcEV2oQQZWATjfcMUKFg==",
+  "success": true,
+  "projectFilePath": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Web\\Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\buihu\\.nuget\\packages\\facebook\\7.0.10-beta\\facebook.7.0.10-beta.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.aspnetcore.authentication.facebook\\8.0.0-rc.2.23480.2\\microsoft.aspnetcore.authentication.facebook.8.0.0-rc.2.23480.2.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.aspnetcore.authentication.google\\8.0.0-rc.2.23480.2\\microsoft.aspnetcore.authentication.google.8.0.0-rc.2.23480.2.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0-preview.3.23177.8\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0-preview.3.23177.8.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.15.1\\microsoft.identitymodel.jsonwebtokens.6.15.1.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.identitymodel.logging\\6.15.1\\microsoft.identitymodel.logging.6.15.1.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.identitymodel.protocols\\6.15.1\\microsoft.identitymodel.protocols.6.15.1.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\6.15.1\\microsoft.identitymodel.protocols.openidconnect.6.15.1.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\microsoft.identitymodel.tokens\\6.15.1\\microsoft.identitymodel.tokens.6.15.1.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\system.identitymodel.tokens.jwt\\6.15.1\\system.identitymodel.tokens.jwt.6.15.1.nupkg.sha512",
+    "C:\\Users\\buihu\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Facebook 7.0.10-beta' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net8.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Facebook",
+      "targetGraphs": [
+        "net8.0"
+      ]
+    }
+  ]
+}

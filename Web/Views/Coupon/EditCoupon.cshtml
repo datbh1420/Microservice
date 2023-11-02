@@ -1,0 +1,54 @@
+﻿@using System.Globalization;
+@model CouponDTO
+@{
+    ViewData["Title"] = "DeleteCoupon";
+}
+
+
+
+<form asp-action="EditCoupon">
+    <br />
+    <div class="container border pb-3">
+        <h1 class="text-white text-center">Create Coupon</h1>
+        <input asp-for="Id" hidden />
+
+        <hr />
+        <div class="row">
+            <div class="col-3">
+                <label class="control-label pt-2 text-white" style="font-size: 20px;">Coupon Code</label>
+            </div>
+            <div class="col-9 pb-3">
+                <input asp-for="Code" class="form-control" />
+                <span asp-validation-for="Code" class="text-danger" />
+            </div>
+            <div class="col-3">
+                <label class="control-label pt-2 text-white" style="font-size: 20px;">Discount Amount</label>
+            </div>
+            <div class="col-9 pb-3">
+                <input asp-for="Discount" class="form-control" />
+                <span asp-validation-for="Discount" class="text-danger" />
+            </div>
+            <div class="col-3">
+                <label class="control-label pt-2 text-white" style="font-size: 20px;">Min Amount</label>
+            </div>
+            <div class="col-9 pb-3">
+                <input asp-for="MinAmount" class="form-control" />
+                <span asp-validation-for="MinAmount" class="text-danger" />
+            </div>
+            <div class="col-5 offset-2">
+                <a class="btn-primary btn form-control" asp-action="CouponIndex">Back to List</a>
+            </div>
+            <div class="col-5 ">
+                <input type="submit" value="Update" class="btn btn-primary form-control" />
+            </div>
+        </div>
+    </div>
+
+</form>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
