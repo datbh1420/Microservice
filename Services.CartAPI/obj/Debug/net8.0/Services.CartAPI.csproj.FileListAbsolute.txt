@@ -78,3 +78,4 @@ D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\obj\Debug\net8.0\refint
 D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\obj\Debug\net8.0\Services.CartAPI.pdb
 D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\obj\Debug\net8.0\Services.CartAPI.genruntimeconfig.cache
 D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\obj\Debug\net8.0\ref\Services.CartAPI.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\obj\Debug\net8.0\Services.CartAPI.sourcelink.json

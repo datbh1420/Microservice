@@ -2,7 +2,6 @@
 using BackEnd.ProductAPI.Models.DTO;
 using BackEnd.ProductAPI.Service;
 using Microsoft.AspNetCore.Mvc;
-using BackEnd.ProductAPI.Models.DTO;
 
 namespace Mango.Service.ProductAPI.Controllers
 {

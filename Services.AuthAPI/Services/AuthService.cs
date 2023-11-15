@@ -1,6 +1,6 @@
-﻿using BackEnd.CouponAPI.Data;
+﻿using BackEnd.AuthAPI.Models.DTO;
+using BackEnd.CouponAPI.Data;
 using Microsoft.AspNetCore.Identity;
-using BackEnd.AuthAPI.Models.DTO;
 
 namespace BackEnd.AuthAPI.Services
 {
@@ -93,6 +93,7 @@ namespace BackEnd.AuthAPI.Services
                     {
                         return "";
                     }
+
                     return resultCreate.Errors.First().Description;
                 }
                 return $"Email {registerDTO.Email} is already exist";

@@ -74,3 +74,4 @@ D:\User\Panda\Desktop\MicroservicesDemo\Services.ProductAPI\obj\Debug\net8.0\ref
 D:\User\Panda\Desktop\MicroservicesDemo\Services.ProductAPI\obj\Debug\net8.0\Services.ProductAPI.pdb
 D:\User\Panda\Desktop\MicroservicesDemo\Services.ProductAPI\obj\Debug\net8.0\Services.ProductAPI.genruntimeconfig.cache
 D:\User\Panda\Desktop\MicroservicesDemo\Services.ProductAPI\obj\Debug\net8.0\ref\Services.ProductAPI.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.ProductAPI\obj\Debug\net8.0\Services.ProductAPI.sourcelink.json

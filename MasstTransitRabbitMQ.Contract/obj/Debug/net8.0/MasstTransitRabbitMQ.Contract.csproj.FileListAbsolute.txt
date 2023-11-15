@@ -1,0 +1,13 @@
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\obj\Debug\net8.0\MasstTransitRabbitMQ.Contract.csproj.AssemblyReference.cache
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\obj\Debug\net8.0\MasstTransitRabbitMQ.Contract.GeneratedMSBuildEditorConfig.editorconfig
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\obj\Debug\net8.0\MasstTransitRabbitMQ.Contract.AssemblyInfoInputs.cache
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\obj\Debug\net8.0\MasstTransitRabbitMQ.Contract.AssemblyInfo.cs
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\obj\Debug\net8.0\MasstTransitRabbitMQ.Contract.csproj.CoreCompileInputs.cache
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\obj\Debug\net8.0\MasstTransitRabbitMQ.Contract.sourcelink.json
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\bin\Debug\net8.0\MasstTransitRabbitMQ.Contract.deps.json
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\bin\Debug\net8.0\MasstTransitRabbitMQ.Contract.dll
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\bin\Debug\net8.0\MasstTransitRabbitMQ.Contract.pdb
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\obj\Debug\net8.0\MasstTransitRabbitMQ.Contract.dll
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\obj\Debug\net8.0\refint\MasstTransitRabbitMQ.Contract.dll
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\obj\Debug\net8.0\MasstTransitRabbitMQ.Contract.pdb
+D:\User\Panda\Desktop\MicroservicesDemo\MasstTransitRabbitMQ.Contract\obj\Debug\net8.0\ref\MasstTransitRabbitMQ.Contract.dll

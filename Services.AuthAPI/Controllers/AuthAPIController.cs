@@ -1,6 +1,9 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using BackEnd.AuthAPI.Models.DTO;
+﻿using BackEnd.AuthAPI.Models.DTO;
 using BackEnd.AuthAPI.Services;
+using MassTransit;
+using MasstTransitRabbitMQ.Contract.Constants;
+using MasstTransitRabbitMQ.Contract.IntergrationEvents;
+using Microsoft.AspNetCore.Mvc;
 
 namespace BackEnd.AuthAPI.Controllers
 {
@@ -10,10 +13,12 @@ namespace BackEnd.AuthAPI.Controllers
     {
         private readonly IAuthService service;
         private ResponseDTO responseDTO;
-        public AuthAPIController(IAuthService service)
+        private IPublishEndpoint publishEndpoint;
+        public AuthAPIController(IAuthService service, IPublishEndpoint publishEndpoint)
         {
             this.service = service;
             responseDTO = new ResponseDTO();
+            this.publishEndpoint = publishEndpoint;
         }
 
         [HttpPost("Register")]
@@ -22,11 +27,21 @@ namespace BackEnd.AuthAPI.Controllers
             try
             {
                 var result = await service.Register(registerDTO);
-                if (!string.IsNullOrEmpty(result))
+                if (string.IsNullOrEmpty(result))
                 {
-                    responseDTO.IsSuccess = false;
-                    responseDTO.Message = result;
+                    await publishEndpoint.Publish(new DomainEvent.RegisterNotification
+                    {
+                        Id = Guid.NewGuid(),
+                        TimeSpan = DateTime.Now,
+                        Content = result,
+                        Title = "Register Notification",
+                        Type = NotificationType.register
+                    });
+
+                    return responseDTO;
                 }
+                responseDTO.IsSuccess = false;
+                responseDTO.Message = result;
             }
             catch (Exception ex)
             {

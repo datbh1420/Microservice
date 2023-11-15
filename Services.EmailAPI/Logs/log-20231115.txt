@@ -1,0 +1,22 @@
+2023-11-15 17:57:42.321 +07:00 [DBG] Starting bus instances: IBus
+2023-11-15 17:57:42.391 +07:00 [DBG] Starting bus: "rabbitmq://localhost/panda207"
+2023-11-15 17:57:42.498 +07:00 [DBG] Connect: guest@localhost:5672/panda207
+2023-11-15 17:57:42.996 +07:00 [DBG] Connected: guest@localhost:5672/panda207 (address: amqp://localhost:5672, local: 51595)
+2023-11-15 17:57:43.060 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/panda207/DESKTOPVKP6FCR_ServicesEmailAPI_bus_jb8oyyn7trybk7k1bdp6m1po8n?temporary=true"
+2023-11-15 17:57:43.065 +07:00 [INF] Bus started: "rabbitmq://localhost/panda207"
+2023-11-15 18:03:35.222 +07:00 [INF] Configured endpoint SendRegisterNotificationWhenReceivedCustomer, Consumer: Services.EmailAPI.MessageBus.Events.SendRegisterNotificationWhenReceivedCustomer
+2023-11-15 18:03:35.431 +07:00 [DBG] Starting bus instances: IBus
+2023-11-15 18:03:35.438 +07:00 [DBG] Starting bus: "rabbitmq://localhost/panda207"
+2023-11-15 18:03:35.517 +07:00 [DBG] Connect: guest@localhost:5672/panda207
+2023-11-15 18:03:35.789 +07:00 [DBG] Connected: guest@localhost:5672/panda207 (address: amqp://localhost:5672, local: 51648)
+2023-11-15 18:03:35.844 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/panda207/DESKTOPVKP6FCR_ServicesEmailAPI_bus_abfoyyn7trybkhjsbdp6m1wdnb?temporary=true"
+2023-11-15 18:03:35.956 +07:00 [DBG] Declare queue: name: SendRegisterNotificationWhenReceivedCustomer, durable, consumer-count: 0 message-count: 0
+2023-11-15 18:03:35.975 +07:00 [DBG] Declare exchange: name: SendRegisterNotificationWhenReceivedCustomer, type: fanout, durable
+2023-11-15 18:03:35.979 +07:00 [DBG] Declare exchange: name: MasstTransitRabbitMQ.Contract.IntergrationEvents:DomainEvent-RegisterNotification, type: fanout, durable
+2023-11-15 18:03:35.991 +07:00 [DBG] Bind queue: source: SendRegisterNotificationWhenReceivedCustomer, destination: SendRegisterNotificationWhenReceivedCustomer
+2023-11-15 18:03:36.011 +07:00 [DBG] Bind exchange: source: MasstTransitRabbitMQ.Contract.IntergrationEvents:DomainEvent-RegisterNotification, destination: SendRegisterNotificationWhenReceivedCustomer
+2023-11-15 18:03:36.065 +07:00 [DBG] Consumer Ok: "rabbitmq://localhost/panda207/SendRegisterNotificationWhenReceivedCustomer" - amq.ctag-dJr7ZwYlcy89GIDsADOErw
+2023-11-15 18:03:36.067 +07:00 [DBG] Endpoint Ready: "rabbitmq://localhost/panda207/SendRegisterNotificationWhenReceivedCustomer"
+2023-11-15 18:03:36.070 +07:00 [INF] Bus started: "rabbitmq://localhost/panda207"
+2023-11-15 18:05:52.115 +07:00 [DBG] RECEIVE "rabbitmq://localhost/panda207/SendRegisterNotificationWhenReceivedCustomer" "74340000-5d89-0015-d190-08dbe5cac956" MasstTransitRabbitMQ.Contract.IntergrationEvents.DomainEvent+RegisterNotification Services.EmailAPI.MessageBus.Events.SendRegisterNotificationWhenReceivedCustomer("00:00:18.7645598")
+2023-11-15 18:09:20.004 +07:00 [DBG] RECEIVE "rabbitmq://localhost/panda207/SendRegisterNotificationWhenReceivedCustomer" "74340000-5d89-0015-6c89-08dbe5cb4a45" MasstTransitRabbitMQ.Contract.IntergrationEvents.DomainEvent+RegisterNotification Services.EmailAPI.MessageBus.Events.SendRegisterNotificationWhenReceivedCustomer("00:00:10.8967306")

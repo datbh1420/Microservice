@@ -76,3 +76,11 @@ D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\obj\Debug\net8.0\refint
 D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\obj\Debug\net8.0\Services.AuthAPI.pdb
 D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\obj\Debug\net8.0\Services.AuthAPI.genruntimeconfig.cache
 D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\obj\Debug\net8.0\ref\Services.AuthAPI.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\obj\Debug\net8.0\Services.AuthAPI.sourcelink.json
+D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\bin\Debug\net8.0\MassTransit.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\bin\Debug\net8.0\MassTransit.Abstractions.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\bin\Debug\net8.0\MediatR.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\bin\Debug\net8.0\MasstTransitRabbitMQ.Contract.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.AuthAPI\bin\Debug\net8.0\MasstTransitRabbitMQ.Contract.pdb
