@@ -1,8 +1,8 @@
 ﻿using BackEnd.CouponAPI.Models;
 using BackEnd.CouponAPI.Models.DTO;
 using BackEnd.CouponAPI.Service;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using BackEnd.CouponAPI.Models.DTO;
 
 namespace Mango.Service.CouponAPI.Controllers
 {
@@ -110,7 +110,7 @@ namespace Mango.Service.CouponAPI.Controllers
 
         [HttpDelete]
         [Route("{Id}")]
-        //[Authorize(Roles = "Admin")]
+        [Authorize(Roles = "Admin")]
         public async Task<ResponseDTO> DeleteAsync(string Id)
         {
             try

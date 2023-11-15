@@ -22,7 +22,7 @@ namespace MasstTransitRabbitMQ.Contract.IntergrationEvents
             public DateTimeOffset TimeSpan { get; set; }
         }
 
-        public record class OrderNotification : INotificationEvent
+        public record class RewardsNotification : INotificationEvent
         {
             public string Title { get; set; }
             public object Content { get; set; }

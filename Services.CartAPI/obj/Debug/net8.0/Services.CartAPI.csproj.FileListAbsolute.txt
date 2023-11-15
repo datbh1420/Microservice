@@ -79,3 +79,10 @@ D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\obj\Debug\net8.0\Servic
 D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\obj\Debug\net8.0\Services.CartAPI.genruntimeconfig.cache
 D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\obj\Debug\net8.0\ref\Services.CartAPI.dll
 D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\obj\Debug\net8.0\Services.CartAPI.sourcelink.json
+D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\bin\Debug\net8.0\MassTransit.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\bin\Debug\net8.0\MassTransit.Abstractions.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\bin\Debug\net8.0\MediatR.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\bin\Debug\net8.0\MasstTransitRabbitMQ.Contract.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.CartAPI\bin\Debug\net8.0\MasstTransitRabbitMQ.Contract.pdb

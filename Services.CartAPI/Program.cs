@@ -35,6 +35,10 @@ builder.Services.AddSwaggerGen(options =>
   });
 });
 
+//Add MassTransit RabbitMQ
+builder.Services.AddMassTransitRabbitMQ(builder.Configuration);
+
+
 //DbContext
 builder.Services.AddDbContext<AppDbContext>(options =>
 {

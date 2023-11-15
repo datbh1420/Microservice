@@ -128,6 +128,23 @@ namespace Web.Controllers
             return View(orderHeaderDTO);
         }
 
+        [HttpPost]
+        public async Task<IActionResult> EmailCart(CartDTO cartDTO)
+        {
+            CartDTO cart = await LoadCart();
+            cart.CartHeader.Email = User.Claims.Where(x => x.Type == ClaimTypes.Email)?.FirstOrDefault()?.Value;
+
+            ResponseDTO? response = await cartService.EmailCart(cart);
+            if (response is not null && response.IsSuccess)
+            {
+                TempData["success"] = "Email will be processed and sent shortly.";
+            }
+            else
+            {
+                TempData["error"] = "Error";
+            }
+            return RedirectToAction("CartIndex");
+        }
         private async Task<CartDTO> LoadCart()
         {
             var userId = User.Claims.Where(x => x.Type == ClaimTypes.NameIdentifier).First().Value;

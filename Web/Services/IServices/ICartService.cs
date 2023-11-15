@@ -9,5 +9,6 @@ namespace Web.Services.IServices
         Task<ResponseDTO?> RemoveCart(string cartDetailsId);
         Task<ResponseDTO?> ApplyCoupon(CartDTO cartDTO);
         Task<ResponseDTO?> RemoveCoupon(CartDTO cartDTO);
+        Task<ResponseDTO?> EmailCart(CartDTO cartDTO);
     }
 }

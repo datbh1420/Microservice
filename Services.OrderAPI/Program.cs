@@ -6,6 +6,7 @@ using Mango.Services.OrderAPI;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
+using Services.OrderAPI.Extensions;
 using Services.OrderAPI.Services;
 using Services.OrderAPI.Utility;
 
@@ -42,6 +43,10 @@ builder.Services.AddSwaggerGen(options =>
         }
     });
 });
+
+
+// Add MassTransit RabbitMQ
+builder.Services.AddMassTransitRabbitMQ(builder.Configuration);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
 {

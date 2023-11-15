@@ -4,6 +4,6 @@
     {
         public static string register = nameof(register);
         public static string emailcart = nameof(emailcart);
-        public static string order = nameof(order);
+        public static string rewards = nameof(rewards);
     }
 }

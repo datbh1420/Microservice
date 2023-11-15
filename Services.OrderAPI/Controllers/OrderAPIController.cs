@@ -1,4 +1,7 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MassTransit;
+using MasstTransitRabbitMQ.Contract.Constants;
+using MasstTransitRabbitMQ.Contract.IntergrationEvents;
+using Microsoft.AspNetCore.Mvc;
 using Services.OrderAPI.Models;
 using Services.OrderAPI.Models.DTO;
 using Services.OrderAPI.Services;
@@ -12,12 +15,14 @@ namespace Services.OrderAPI.Controllers
     public class OrderAPIController : ControllerBase
     {
         private readonly IOrderService orderService;
+        private readonly IPublishEndpoint publishEndpoint;
         private ResponseDTO responseDTO;
 
-        public OrderAPIController(IOrderService orderService)
+        public OrderAPIController(IOrderService orderService, IPublishEndpoint publishEndpoint)
         {
             this.orderService = orderService;
             responseDTO = new ResponseDTO();
+            this.publishEndpoint = publishEndpoint;
         }
         [HttpGet("GetOrders")]
         public async Task<ResponseDTO> GetOrders(string? userId = "")
@@ -101,6 +106,20 @@ namespace Services.OrderAPI.Controllers
             try
             {
                 OrderHeader orderHeader = await orderService.ValidateStripeSession(orderHeaderId);
+                RewardsDTO rewardsDTO = new()
+                {
+                    OrderId = orderHeader.OrderHeaderId,
+                    RewardsActivity = Convert.ToInt32(orderHeader.OrderTotal),
+                    UserId = orderHeader.UserId
+                };
+                await publishEndpoint.Publish(new DomainEvent.RewardsNotification
+                {
+                    Id = Guid.NewGuid(),
+                    TimeSpan = DateTime.Now,
+                    Content = rewardsDTO,
+                    Title = "Rewards Notification",
+                    Type = NotificationType.rewards
+                });
                 responseDTO.Result = orderHeader;
             }
             catch (Exception ex)

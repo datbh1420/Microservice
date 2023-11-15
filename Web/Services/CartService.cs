@@ -21,6 +21,16 @@ namespace Web.Services
             });
         }
 
+        public async Task<ResponseDTO?> EmailCart(CartDTO cartDTO)
+        {
+            return await baseService.SendAsync(new RequestDTO
+            {
+                Data = cartDTO,
+                APIType = Utility.SD.APIType.POST,
+                Url = SD.CartAPIBase + "/api/cart/EmailCartRequest"
+            });
+        }
+
         public async Task<ResponseDTO?> GetCart(string userId)
         {
             return await baseService.SendAsync(new RequestDTO

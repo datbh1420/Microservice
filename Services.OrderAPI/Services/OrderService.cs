@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using BackEnd.Order.Data;
+using MassTransit;
 using Microsoft.EntityFrameworkCore;
 using Services.OrderAPI.Models;
 using Services.OrderAPI.Models.DTO;
@@ -23,11 +24,13 @@ namespace Services.OrderAPI.Services
     {
         private readonly AppDbContext context;
         private readonly IMapper mapper;
+        private readonly IPublishEndpoint publishEndpoint;
 
-        public OrderService(AppDbContext context, IMapper mapper)
+        public OrderService(AppDbContext context, IMapper mapper, IPublishEndpoint publishEndpoint)
         {
             this.context = context;
             this.mapper = mapper;
+            this.publishEndpoint = publishEndpoint;
         }
         public async Task<OrderHeaderDTO?> CreateAsync(CartDTO cartDTO)
         {
@@ -207,6 +210,13 @@ namespace Services.OrderAPI.Services
                     orderHeader.Status = SD.Status_Approve;
                     context.orderHeaders.Update(orderHeader);
                     context.SaveChanges();
+
+                    RewardsDTO rewardsDTO = new()
+                    {
+                        OrderId = orderHeader.OrderHeaderId,
+                        RewardsActivity = Convert.ToInt32(orderHeader.OrderTotal),
+                        UserId = orderHeader.UserId
+                    };
 
 
                 }

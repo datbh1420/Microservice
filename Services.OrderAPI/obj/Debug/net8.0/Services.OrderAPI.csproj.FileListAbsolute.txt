@@ -80,3 +80,10 @@ D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\obj\Debug\net8.0\Servi
 D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\obj\Debug\net8.0\Services.OrderAPI.genruntimeconfig.cache
 D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\obj\Debug\net8.0\ref\Services.OrderAPI.dll
 D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\obj\Debug\net8.0\Services.OrderAPI.sourcelink.json
+D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\bin\Debug\net8.0\MassTransit.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\bin\Debug\net8.0\MassTransit.Abstractions.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\bin\Debug\net8.0\MassTransit.RabbitMqTransport.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\bin\Debug\net8.0\MediatR.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\bin\Debug\net8.0\MediatR.Contracts.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\bin\Debug\net8.0\MasstTransitRabbitMQ.Contract.dll
+D:\User\Panda\Desktop\MicroservicesDemo\Services.OrderAPI\bin\Debug\net8.0\MasstTransitRabbitMQ.Contract.pdb

@@ -1,6 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Services.EmailAPI.Data;
-using Services.EmailAPI.Message;
 using Services.EmailAPI.Models;
 using Services.EmailAPI.Models.DTO;
 using System.Text;
@@ -35,9 +34,9 @@ namespace Mango.Services.EmailAPI.Services
             await LogAndEmail(message.ToString(), cartDTO.CartHeader.Email);
         }
 
-        public async Task LogOrderPlaced(RewardsMessage rewardsMessage)
+        public async Task LogOrderPlaced(RewardsDTO rewardsDTO)
         {
-            string message = "New Order Placed. <br/> Order ID: " + rewardsMessage.OrderId;
+            string message = "New Order Placed. <br/> Order ID: " + rewardsDTO.OrderId;
             await LogAndEmail(message, "dotnetmastery@gmail.com");
         }
 

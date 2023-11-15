@@ -1,6 +1,7 @@
 ﻿using BackEnd.CartAPI.Models.DTO;
-
-
+using MassTransit;
+using MasstTransitRabbitMQ.Contract.Constants;
+using MasstTransitRabbitMQ.Contract.IntergrationEvents;
 using Microsoft.AspNetCore.Mvc;
 using Services.CartAPI.Models.DTO;
 using Services.CartAPI.Services;
@@ -11,12 +12,14 @@ namespace Services.CartAPI.Controllers
     public class CartAPIController : ControllerBase
     {
         private readonly ICartService cartService;
+        private readonly IPublishEndpoint publishEndpoint;
         private ResponseDTO responseDTO;
 
-        public CartAPIController(ICartService cartService)
+        public CartAPIController(ICartService cartService, IPublishEndpoint publishEndpoint)
         {
             this.cartService = cartService;
             responseDTO = new ResponseDTO();
+            this.publishEndpoint = publishEndpoint;
         }
 
         [HttpGet("GetCart/{userId}")]
@@ -53,6 +56,29 @@ namespace Services.CartAPI.Controllers
         {
             var result = await cartService.RemoveCoupon(cartDTO);
             responseDTO.Result = result;
+            return responseDTO;
+        }
+
+        [HttpPost("EmailCartRequest")]
+        public async Task<ResponseDTO> EmailCartRequest([FromBody] CartDTO cartdto)
+        {
+            try
+            {
+                await publishEndpoint.Publish(new DomainEvent.EmailCartNotification
+                {
+                    Id = Guid.NewGuid(),
+                    TimeSpan = DateTime.Now,
+                    Content = cartdto,
+                    Title = "Cart Notification",
+                    Type = NotificationType.emailcart
+                });
+                responseDTO.Result = true;
+            }
+            catch (Exception ex)
+            {
+                responseDTO.Message = ex.ToString();
+                responseDTO.IsSuccess = false;
+            }
             return responseDTO;
         }
     }

@@ -4,14 +4,14 @@
     "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Services.CartAPI\\Services.CartAPI.csproj": {}
   },
   "projects": {
-    "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Services.CartAPI\\Services.CartAPI.csproj": {
+    "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\MasstTransitRabbitMQ.Contract\\MasstTransitRabbitMQ.Contract.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Services.CartAPI\\Services.CartAPI.csproj",
-        "projectName": "Services.CartAPI",
-        "projectPath": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Services.CartAPI\\Services.CartAPI.csproj",
+        "projectUniqueName": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\MasstTransitRabbitMQ.Contract\\MasstTransitRabbitMQ.Contract.csproj",
+        "projectName": "MasstTransitRabbitMQ.Contract",
+        "projectPath": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\MasstTransitRabbitMQ.Contract\\MasstTransitRabbitMQ.Contract.csproj",
         "packagesPath": "C:\\Users\\buihu\\.nuget\\packages\\",
-        "outputPath": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Services.CartAPI\\obj\\",
+        "outputPath": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\MasstTransitRabbitMQ.Contract\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\buihu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,75 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.1.3-develop.1596, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-rc.2.23502.2/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Services.CartAPI\\Services.CartAPI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Services.CartAPI\\Services.CartAPI.csproj",
+        "projectName": "Services.CartAPI",
+        "projectPath": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Services.CartAPI\\Services.CartAPI.csproj",
+        "packagesPath": "C:\\Users\\buihu\\.nuget\\packages\\",
+        "outputPath": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\Services.CartAPI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\buihu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\MasstTransitRabbitMQ.Contract\\MasstTransitRabbitMQ.Contract.csproj": {
+                "projectPath": "D:\\User\\Panda\\Desktop\\MicroservicesDemo\\MasstTransitRabbitMQ.Contract\\MasstTransitRabbitMQ.Contract.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
             "AutoMapper": {
               "target": "Package",
               "version": "[12.0.1, )"
@@ -47,6 +116,14 @@
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[12.0.1, )"
+            },
+            "MassTransit": {
+              "target": "Package",
+              "version": "[8.1.3-develop.1596, )"
+            },
+            "MassTransit.RabbitMQ": {
+              "target": "Package",
+              "version": "[8.1.3-develop.1596, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -69,10 +146,6 @@
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
-            },
-            "RabbitMQ.Client": {
-              "target": "Package",
-              "version": "[6.6.0, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
